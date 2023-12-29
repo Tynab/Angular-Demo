@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myController">
+        <h4>Scope:</h4>
+
+        <div ng-controller="firstController">
+            <div>{{name}}</div>
+        </div>
+
+        <div ng-controller="secondController">
+            <div>{{name}}</div>
+        </div>
+
+        <div ng-controller="thirdController">
+            <div>{{name}}</div>
+        </div>
+    </div>
+
+    <div>
+        <h4>Root Scope:</h4>
+
+        <div ng-controller="mainController">
+            <div>{{name}}</div>
+        </div>
+
+        <div ng-controller="myController">
+            <div>{{name}}</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myController" ng-init="message='Directive:'">
+        <h4>{{message}}</h4>
+        <div directive-title></div>
+    </div>
+</body>
+</html>
