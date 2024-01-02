@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <h4>Web Service:</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Date of Birth</td>
+                <td>Salary</td>
+                <td>Gender</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="employee in employees">
+                <td>{{employee.Id}}</td>
+                <td>{{employee.Name | uppercase}}</td>
+                <td>{{employee.DoB | date:"dd/MM/yyyy"}}</td>
+                <td>{{employee.Salary | currency:""}}</td>
+                <td>{{employee.Gender | lowercase}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

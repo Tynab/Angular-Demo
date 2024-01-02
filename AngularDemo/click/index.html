@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <h4>Click:</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Likes</td>
+                <td>Dislikes</td>
+                <td>Minus</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="technology in technologies">
+                <td>{{technology.Name}}</td>
+                <td>{{technology.Likes}}</td>
+                <td>{{technology.Dislikes}}</td>
+                <td>{{technology.Minus}}</td>
+
+                <td>
+                    <button ng-click="increaseLike(technology)">Like</button>
+                    <button ng-click="increaseDislike(technology)">Dislike</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

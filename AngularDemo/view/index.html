@@ -8,21 +8,19 @@
     <script src="app.js"></script>
 </head>
 
-<body>
+<body ng-controller="myController">
     <h4>Binding:</h4>
 
-    <div ng-controller="myController">
-        <div>
-            <div>First Name: <input type="text" maxlength="7" style="text-align: center" ng-model="employee.FirstName" /></div>
-            <div>Last Name: <input type="text" maxlength="7" style="text-align: center" ng-model="employee.LastName" /></div>
-            <div>Gender: <input type="text" maxlength="7" style="text-align: center" ng-model="employee.Gender" /></div>
-        </div>
+    <div>
+        <div>First Name: <input type="text" maxlength="7" style="text-align: center" ng-model="employee.FirstName" /></div>
+        <div>Last Name: <input type="text" maxlength="7" style="text-align: center" ng-model="employee.LastName" /></div>
+        <div>Gender: <input type="text" maxlength="7" style="text-align: center" ng-model="employee.Gender" /></div>
+    </div>
 
-        <div style="padding-top: 20px">
-            <div>First Name: {{employee.FirstName}}</div>
-            <div>Last Name: {{employee.LastName}}</div>
-            <div>Gender: {{employee.Gender}}</div>
-        </div>
+    <div style="padding-top: 20px">
+        <div>First Name: {{employee.FirstName}}</div>
+        <div>Last Name: {{employee.LastName}}</div>
+        <div>Gender: {{employee.Gender}}</div>
     </div>
 </body>
 </html>

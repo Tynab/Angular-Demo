@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app="repeatModule">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="repeat.js"></script>
+</head>
+
+<body ng-controller="repeatController">
+    <h4>Repeat:</h4>
+
+    <ul>
+        <li ng-repeat="country in countries">
+            {{$index + 1}}. {{country.name}}
+            <ul>
+                <li ng-repeat="city in country.cities">{{$parent.$index + 1}}.{{$index + 1}}. {{city.name}}</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
