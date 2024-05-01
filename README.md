@@ -1,2 +1,2 @@
 # Angular-Demo
- Angular JS demo
+ Angular JS demo.
