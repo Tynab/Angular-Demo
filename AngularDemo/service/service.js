@@ -1,19 +1,22 @@
 ﻿app.factory('myService', function () {
     return {
         transformString: function (input) {
-            if (input != '') {
-                var output = ''
+            if (!input) {
+                return ''
+            }
 
-                for (var i = 0; i < input.length; i++) {
-                    if (i > 0 && input[i] == input[i].toUpperCase()) {
-                        output += ' '
-                    }
+            input = input.toString()
+            var output = ''
 
-                    output += input[i]
+            for (var i = 0; i < input.length; i++) {
+                if (i > 0 && input[i] === input[i].toUpperCase() && input[i] !== input[i].toLowerCase()) {
+                    output += ' '
                 }
 
-                return output
+                output += input[i]
             }
+
+            return output
         }
     }
 })

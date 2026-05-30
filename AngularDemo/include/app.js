@@ -15,12 +15,12 @@
     $scope.employeeView = 'listEmployee.html'
 
     $scope.sortData = function (column) {
-        $scope.reverse = $scope.sortColumn == column ? !$scope.reverse : $scope.column = false
+        $scope.reverse = $scope.sortColumn === column ? !$scope.reverse : false
         $scope.sortColumn = column
     }
 
     $scope.getSortClass = function (column) {
-        return $scope.sortColumn == column ? $scope.reverse ? 'arrow-up' : 'arrow-down' : ''
+        return $scope.sortColumn === column ? ($scope.reverse ? 'arrow-up' : 'arrow-down') : ''
     }
 }).filter('status', function () {
     return function (input) {
